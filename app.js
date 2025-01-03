@@ -13,7 +13,7 @@ function renderExpenses() {
     addExpenseToDOM(expense.category, expense.amount, expense.date, false);
     totalAmount += expense.amount;
   });
-  totalAmountDisplay.textContent = totalAmount.toFixed(0);
+  totalAmountDisplay.textContent = `$${totalAmount.toFixed(2)}`;
 }
 
 addButton.addEventListener("click", () => {
@@ -29,7 +29,7 @@ addButton.addEventListener("click", () => {
   addExpenseToDOM(category, amount, date);
 
   totalAmount += amount;
-  totalAmountDisplay.textContent = totalAmount.toFixed(0);
+  totalAmountDisplay.textContent = `$${totalAmount.toFixed(2)}`;
 
   categoryInput.value = "";
   amountInput.value = "";
@@ -51,7 +51,7 @@ function addExpenseToDOM(category, amount, date, save = true) {
   expenseRow.appendChild(categoryCell);
 
   const amountCell = document.createElement("div");
-  amountCell.textContent = amount.toFixed(0);
+  amountCell.textContent = amount.toFixed(2);
   expenseRow.appendChild(amountCell);
 
   const dateCell = document.createElement("div");
@@ -76,7 +76,7 @@ function addExpenseToDOM(category, amount, date, save = true) {
     localStorage.setItem("expenses", JSON.stringify(expenses));
 
     totalAmount -= amount;
-    totalAmountDisplay.textContent = totalAmount.toFixed(0);
+    totalAmountDisplay.textContent = `$${totalAmount.toFixed(2)}`;
     expenseRow.remove();
   });
 
