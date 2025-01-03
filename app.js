@@ -6,7 +6,6 @@ const totalAmountDisplay = document.getElementById("total-amount");
 const expensesFooter = document.querySelector(".expences-footer");
 
 let totalAmount = 0;
-
 let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
 
 function renderExpenses() {
