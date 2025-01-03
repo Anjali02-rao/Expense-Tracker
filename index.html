@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E.Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Expenses Tracker</h2>
+      <div class="expences-header">
+        <label for="catagory-input">Category:</label>
+        <select id="select-category">
+          <option value="" disabled selected>Select Category</option>
+          <option value="rent">Rent</option>
+          <option value="school-fee">School-Fee</option>
+          <option value="transport">Transport</option>
+          <option value="food">Food</option>
+          <option value="shopping">Shopping</option>
+          <option value="entertainment">Entertainment</option>
+        </select>
+        <label for="input-amount">Amount:</label>
+        <input type="number" name="" id="input-amount" />
+
+        <label for="input-date">Due date:</label>
+        <input type="date" name="" id="input-date" />
+
+        <button id="add-button">Add</button>
+      </div>
+
+      <div class="expences-footer">
+        <div class="total">Total Expenses:</div>
+        <div id="total-amount"></div>
+
+        <div class="title">
+          <div>Category</div>
+          <div>Amount</div>
+          <div>Date</div>
+          <div>Delete</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
