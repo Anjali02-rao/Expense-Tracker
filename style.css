@@ -115,7 +115,6 @@ h2 {
     height: auto;
     width: 100%;
     padding: 5px;
-    box-sizing: border-box;
   }
 
   #add-button {
